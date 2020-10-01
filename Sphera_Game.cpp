@@ -94,26 +94,26 @@ void resolveCollision(Sphere* s1, Sphere* s2)
 
     if ((*s1).x < (*s2).x)
     {
-        (*s1).x -= 2 * fabs(((*s1).radius - (diagonal/2))  * cos);
-        (*s2).x += 2 * fabs(((*s2).radius - (diagonal/2))  * cos);
+        (*s1).x -= sqrt(2) * fabs(((*s1).radius - (diagonal/2))  * cos);
+        (*s2).x += sqrt(2) * fabs(((*s2).radius - (diagonal/2))  * cos);
     }
 
     if ((*s2).x < (*s1).x)
     {
-        (*s2).x -= 2 * fabs(((*s2).radius - (diagonal/2))  * cos);
-        (*s1).x += 2 * fabs(((*s1).radius - (diagonal/2))  * cos);
+        (*s2).x -= sqrt(2) * fabs(((*s2).radius - (diagonal/2))  * cos);
+        (*s1).x += sqrt(2) * fabs(((*s1).radius - (diagonal/2))  * cos);
     }
 
     if ((*s1).y < (*s2).y)
     {
-        (*s1).y -= 2 * fabs(((*s1).radius - (diagonal/2))  * sin);
-        (*s2).y += 2 * fabs(((*s2).radius - (diagonal/2))  * sin);
+        (*s1).y -= sqrt(2) * fabs(((*s1).radius - (diagonal/2))  * sin);
+        (*s2).y += sqrt(2) * fabs(((*s2).radius - (diagonal/2))  * sin);
     }
 
     if ((*s2).y < (*s1).y)
     {
-        (*s2).y -= 2 * fabs( ((*s2).radius - (diagonal/2))  * sin);
-        (*s1).y += 2 * fabs( ((*s1).radius - (diagonal/2))  * sin);
+        (*s2).y -= sqrt(2) * fabs( ((*s2).radius - (diagonal/2))  * sin);
+        (*s1).y += sqrt(2) * fabs( ((*s1).radius - (diagonal/2))  * sin);
     }
 }
 
