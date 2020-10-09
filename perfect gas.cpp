@@ -10,7 +10,7 @@ int main()
     int width = 900;
 
     struct Sphere s [number_of_particals];
-    for (int i=1; i<number_of_particals; i++)
+    for (int i=1; i < number_of_particals; i++)
     {
         s[i].radius = 9;
         s[i].red = 255;
@@ -32,7 +32,7 @@ int main()
         txBegin();
         txClear();
 
-        for (int i=1; i<number_of_particals; i++)
+        for (int i=1; i < number_of_particals; i++)
         {
             drawSphere(s[i]);
         }
@@ -57,7 +57,7 @@ int main()
          }
 
 
-        for (int i=1; i<number_of_particals; i++)
+        for (int i=1; i < number_of_particals; i++)
         {
             moveSphere(&(s[i]), dt);
         }
