@@ -65,13 +65,3 @@ int main()
     }
     return 0;
 }
-
-/*
-Sphere particles [10];
- for (int i=0; i<10, i++)
-    drawSphere(particle[i])
-for (int i=0; i<10, i++)
-    moveSphere(particle[i])
-    particle!=0
-    assert(particle);
-    */
