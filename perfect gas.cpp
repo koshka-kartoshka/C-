@@ -21,16 +21,11 @@ int main()
         s[i].vx = 7 * pow((-1),rand());
         s[i].vy = - 7 * pow((-1),rand());
         s[i].segment = 10;
-
     }
-
 
     txCreateWindow(width, height);
     txSetFillColor(RGB(40,40,40));
-
-
     float dt = 0.7;
-
 
     while(true)
     {
@@ -44,33 +39,28 @@ int main()
 
         txEnd();
 
-
-        for (int i=1; i<number_of_particals; i++)
+        for (int i=1; i < number_of_particals; i++)
         {
             wallCollision(&(s[i]), height, width);
         }
 
 
-        for (int i=1; i<number_of_particals; i++)
+        for (int i=1; i < number_of_particals; i++)
         {
-           for (int j=1; j<number_of_particals; j++)
+           for (int j=1; j < number_of_particals; j++)
             {
-                if ( (i!=j) and (collisionTwoSpheres(&(s[i]), &(s[j]))) )
+                if ((i != j) and (collisionTwoSpheres(&(s[i]), &(s[j]))))
                 {
                     resolveCollision(&(s[i]), &(s[j]));
-
                 }
-
-
             }
-
          }
+
 
         for (int i=1; i<number_of_particals; i++)
         {
             moveSphere(&(s[i]), dt);
         }
-
 
     }
     return 0;
